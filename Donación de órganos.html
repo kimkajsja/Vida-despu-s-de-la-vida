@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rozha+One&display=swap" rel="stylesheet">
+    <title>Vida después de la vida</title>
+
+    <style>
+        /* Tamaño de las imágenes de los artículos: cambia solo este valor */
+        :root {
+            --img-ancho: 180px;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            background-color: #16ffb9;
+            color: #043610;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 { font-family: 'Rozha One', serif; margin: 0 0 10px; }
+        h2, h3 { font-family: 'Playfair Display', serif; }
+        h3 { margin: 0; font-weight: 400; }
+
+        img {
+            border-radius: 10px;
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* ---------- HEADER ---------- */
+        header.encabezado {
+            background-color: #46ad9c;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 20px;
+            padding: 20px 30px;
+        }
+        .texto-header { flex: 1 1 300px; }
+        .encabezado > img {
+            margin-left: auto;
+            width: 300px;
+        }
+
+        /* ---------- MENÚ HORIZONTAL RESPONSIVO ---------- */
+        .nav-bar { flex-basis: 100%; }
+        .nav-bar .container { padding: 0; }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 0;
+            padding: 0;
+        }
+        .nav-links a {
+            display: block;
+            padding: 8px 14px;
+            border-radius: 6px;
+            background: #bafac5;
+            color: #043610;
+            text-decoration: none;
+            font-family: 'Playfair Display', serif;
+        }
+        .nav-links a:hover { background: #16ffb9; }
+        .nav-links .external-btn { background: #043610; color: #bafac5; }
+
+        /* ---------- CONTENIDO ---------- */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .articles-section { padding: 40px 0; }
+
+        .card {
+            background: #bafac5;
+            padding: 30px;
+            margin-bottom: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            scroll-margin-top: 20px;
+        }
+
+        /* Texto a la izquierda, imagen a la derecha */
+        .contenedor {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            gap: 20px;
+        }
+        .contenedor h2 {
+            flex: 1 1 100%;
+            margin: 0;
+        }
+        .contenedor .texto {
+            flex: 1 1 280px;
+            min-width: 0;
+        }
+        .contenedor .texto p { margin: 0 0 12px; }
+        .contenedor .imagen {
+            flex: 0 0 auto;
+            width: var(--img-ancho);
+            height: var(--img-ancho);   /* cuadrada, como la referencia */
+            object-fit: cover;          /* recorta sin deformar */
+            margin: 0;
+        }
+
+        .azul  { color: #0b4fa8; }
+        .verde { color: #1b7a2f; }
+
+        /* ---------- PANTALLAS CHICAS ---------- */
+        @media (max-width: 700px) {
+            header.encabezado {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 20px;
+            }
+            .encabezado > img { margin-left: 0; width: 100%; max-width: 300px; }
+            .nav-links { flex-direction: column; width: 100%; }
+            h1 { font-size: 1.8rem; }
+            .card { padding: 20px; }
+            .contenedor .imagen { width: 140px; height: 140px; }
+        }
+        footer {
+            background-color: #46ad9c;
+            color: #043610;
+            text-align: center;
+            padding: 2px 0;
+        }
+    </style>
+</head>
+<body>
+
+<header class="encabezado">
+    <div class="texto-header">
+        <h1>Vida después de la vida.</h1>
+        <h3>Donación de órganos y tejidos para trasplante.</h3>
+    </div>
+
+    <img src="https://www.imss.gob.mx/sites/all/statics/donacion/1a.png" alt="Donación de órganos y tejidos">
+
+    <nav class="nav-bar">
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="#articulo-1">¿Qué es la donación de órganos?</a></li>
+                <li><a href="#articulo-2">¿Quién puede donar órganos?</a></li>
+                <li><a href="#articulo-3">¿Qué órganos y tejidos se pueden donar?</a></li>
+                <li><a href="https://www.gob.mx/cenatra/acciones-y-programas/tarjeta-de-donador" class="external-btn">Regístrate como donador</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<main class="container">
+    <section class="articles-section">
+
+        <article id="articulo-1" class="card">
+            <div class="contenedor">
+                <h2>¿Qué es la donación de órganos?</h2>
+                <div class="texto">
+                    <p>La donación es el acto de dar un órgano, tejido o células de sí mismo a otra persona que lo necesita para mejorar su salud. En el proceso de donación se involucran aspectos médicos, sociales, psicológicos, éticos y legales.</p>
+                    <p>La donación es coordinada por un grupo de médicos, enfermeras, paramédicos y trabajadoras sociales capacitados para fomentar la donación e incrementar el número de trasplantes que se realizan en el país.</p>
+                    <p>Para que una donación se realice es necesaria la autorización de las personas que toman la decisión: el propio donador, sobre todo en la donación en vida, o de los disponentes, es decir las personas que deciden donar los órganos o tejidos de un familiar que perdió la vida.</p>
+                </div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxMr0GxdMFVB92mYhLE1KTAUFhN0wxXuU-QQx0fhUtkfVsnu7BTLl8TjwG&s=10" alt="Pasos de una donación" class="imagen">
+            </div>
+        </article>
+
+        <article id="articulo-2" class="card">
+            <div class="contenedor">
+                <h2>¿Quién puede donar órganos?</h2>
+                <div class="texto">
+                    <p>En la LGS se contempla que toda persona puede ser donadora de órganos o tejidos bajo consentimiento tácito. No obstante, si decides dar vida después de la muerte y convertirte en donador o donadora, lo más importante es comunicarlo a tu familia, ya que en un momento tan difícil como el fallecimiento, conocer tu voluntad puede facilitar la toma de decisiones y hacer menos doloroso el proceso de autorizar la donación. También puedes manifestar tu voluntad firmando la tarjeta de donación de órganos y tejidos o a través del consentimiento expreso que emite el Centro Nacional de Trasplantes. Sin embargo, aun cuando cuentes con estos documentos, la autorización final recae en tu familia, por lo que es importante que tengan la información y respeten tu decisión.</p>
+
+                    <p class="azul"><strong>En vida</strong><br>
+                        ~ Personas entre 18 a 60 años.<br>
+                        ~ Deben gozar de buena salud, vivir sin condiciones que puedan afectar al receptor.<br>
+                        ~ Debe haber una relación familiar sanguínea, de matrimonio o civil.</p>
+
+                    <p class="verde"><strong>Después de la muerte</strong><br>
+                        ~ A partir de los 2 meses y hasta 90 años.<br>
+                        ~ Depende de la condición de salud del donador para considerar si los órganos y tejidos son lo suficientemente saludables.</p>
+                </div>
+                <img src="https://vidauniversitaria.uanl.mx/wp-content/uploads/2024/10/donacion-organos-ilustracion.jpg" alt="Donación de órganos" class="imagen">
+            </div>
+        </article>
+
+        <article id="articulo-3" class="card">
+            <div class="contenedor">
+                <h2>¿Qué órganos y tejidos se pueden donar?</h2>
+                <div class="texto">
+                    <p>Cuando se diagnostica muerte encefálica, se puede donar el corazón, pulmones, hígado, riñones, intestino y páncreas. También es posible donar tejidos como las córneas, huesos, piel, tendones y vasos sanguíneos.</p>
+                    <p>Al fallecer por paro cardíaco se pueden donar habitualmente sólo tejidos: córneas, hueso, piel, tendones y vasos sanguíneos.</p>
+                    <p>En vida es posible donar un riñón, un segmento de hígado, pulmón, intestino y páncreas.</p>
+                </div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIJZnxJOQiY7TwXOaa0JBU7nSHYC2RTJzm2TUoOWOpZP3lUxtMOLLid4JE&s=10" alt="Donación de órganos y tejidos" class="imagen">
+            </div>
+        </article>
+
+    </section>
+</main>
+
+<footer><strong> <pre>2026- Donación de Órganos &copy; derechos reservados. 
+<p>Contacto: 
+    correo:info@donacionorganos.org
+    teléfono: 899-1035-691</p>
+    </pre>
+    </strong>
+</footer>
+</body>
+</html>
